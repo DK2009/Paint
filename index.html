@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Paint</title>
+	<style>
+		body {
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		.colors {
+			width: 80px;
+			height: 100vh;
+			border-right: 2px solid #000;
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.colors * {
+			flex-basis: calc(100% / 8);
+		}
+
+		.colors *:hover {
+			cursor: pointer;
+		}
+
+		.bold {
+			position: fixed;
+			top: 10px;
+			right: 0;
+			display: flex;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="colors">
+		<div style="background: red;"></div>
+		<div style="background: orange;"></div>
+		<div style="background: yellow;"></div>
+		<div style="background: green;"></div>
+		<div style="background: royalblue;"></div>
+		<div style="background: hotpink;"></div>
+		<div style="background: purple;"></div>
+		<div style="background: black;"></div>
+	</div>
+	<div class="bold">
+		<span><b>Bold</b></span>
+		<input type="range">
+	</div>
+	<canvas id="cvs"></canvas>
+</body>
+<script src="./app.js"></script>
+</html>
